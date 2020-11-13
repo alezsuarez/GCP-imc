@@ -22,9 +22,9 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+#def hello():
+#    """Return a friendly HTTP greeting."""
+#    return 'Hello World!'
 
 def imc():
     #Aqui es donde obtenemos la cantidad de personas
@@ -55,21 +55,21 @@ def imc():
 
     #Hacemos las distintas validaciones
     if IMC >= 0 and IMC <= 15.99 :
-        print ("Delgadez severa")
+        return ("Delgadez severa")
     elif IMC >= 16.00 and IMC <= 16.99 :
-        print ("Delgadez moderada")
+        return ("Delgadez moderada")
     elif IMC >= 17.00 and IMC <= 18.49:
-        print ("Delgadez leve")
+        return ("Delgadez leve")
     elif IMC >= 18.50 and IMC <= 24.99 :
-        print ("Normal")
+        return ("Normal")
     elif IMC >= 25.00 and IMC <= 29.99:
-        print ("Sobrepeso")
+        return ("Sobrepeso")
     elif IMC >= 30.00 and IMC <= 34.99:
-        print ("obesidad leve")
+        return ("obesidad leve")
     elif IMC >= 35.00 and IMC <= 39.00:
-        print ("obesidad media")
+        return ("obesidad media")
     elif IMC >= 40.00:
-        print ("obesidad morbida")
+        return ("obesidad morbida")
 
     #Por cada persona a la que le pedimos los datos debemos restarle una (Porque ya la recorrimos)
     #si no el ciclo se vuelve infinito

@@ -1,7 +1,6 @@
 import logging
 
-#from flask import Flask
-import Flask
+from flask import Flask
 
 app = Flask(__name__)
 
